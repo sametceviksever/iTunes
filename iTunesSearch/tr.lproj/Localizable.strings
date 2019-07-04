@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  iTunesSearch
+
+  Created by Samet Çeviksever on 5.03.2019.
+  Copyright © 2019 Samet Çeviksever. All rights reserved.
+*/
+
+"Empty State Title" = "Veri Yok";
+"Empty State" = "Gösterilecek hiçbir veri yok";
+"Unauthorized request" = "İzinsiz Kullanıcı";
+"Server not avaible" = "Server'a Ulaşılamıyor.";
+"Wrong request" = "Yanlış İstek.";
+"all" = "Hepsi";
+"movie" = "Film";
+"podcast" = "PodCast";
+"music" = "Müzik";
+"audiobook" = "Sesli Kitap";
+"iTunes Search" = "iTunes Arama";
+"Your Search Text" = "Aramaka İçin Yazınız...";
+"Media Type" = "Medya Tipi";
+"Are You Sure For Delete ?" = "Silmek istediğinize emin misiniz ?";
+"If you click yes the %@ will delete." = "Evete tıklarsanız %@ silinecek.";
+"Yes" = "Evet";
+"No" = "Hayır";
+"Price" = "Fiyat: %@";

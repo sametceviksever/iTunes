@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  iTunesSearch
+
+  Created by Samet Çeviksever on 5.03.2019.
+  Copyright © 2019 Samet Çeviksever. All rights reserved.
+*/
+
+"Empty State Title" = "No Data";
+"Empty State" = "There is no data to show";
+"Unauthorized request" = "Unauthorized request";
+"Server not avaible" = "Server Not Avaible";
+"Wrong request" = "Wrong Request";
+"all" = "All";
+"movie" = "Movie";
+"podcast" = "PodCast";
+"music" = "Music";
+"audiobook" = "Audio Book";
+"iTunes Search" = "iTunes Search";
+"Your Search Text" = "Please Write For Search...";
+"Media Type" = "Media Type";
+"Are You Sure For Delete ?" = "Are You Sure For Delete ?";
+"If you click yes the %@ will delete." = "If you click yes the %@ will delete.";
+"Yes" = "Yes";
+"No" = "No";
+"Price" = "Price: %@";
