@@ -13,8 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVC" customModule="iTunesSearch" customModuleProvider="target">
             <connections>
                 <outlet property="btnPlay" destination="h59-fX-Inw" id="uzN-6x-rtt"/>
-                <outlet property="img60" destination="imp-sf-TtK" id="sBE-Fp-xlv"/>
-                <outlet property="imgPreview" destination="efX-RI-XAT" id="c86-6Z-NT3"/>
+                <outlet property="img60" destination="imp-sf-TtK" id="LQg-PL-mqI"/>
+                <outlet property="imgPreview" destination="efX-RI-XAT" id="JLx-3M-pNK"/>
                 <outlet property="lblDescription" destination="MTe-iA-S4C" id="Bge-1l-9J8"/>
                 <outlet property="lblGenre" destination="cbC-bE-6C2" id="wzF-mC-vwG"/>
                 <outlet property="lblName" destination="8VU-J4-bho" id="uNP-ov-00e"/>
@@ -34,7 +34,7 @@
                         <view contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="PrK-XV-cpX">
                             <rect key="frame" x="10" y="0.0" width="187.5" height="375"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="efX-RI-XAT" customClass="DownloadableImageView" customModule="iTunesSearch" customModuleProvider="target">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="efX-RI-XAT">
                                     <rect key="frame" x="0.0" y="0.0" width="187.5" height="375"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h59-fX-Inw">
@@ -96,7 +96,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-2Y-8TE">
                                     <rect key="frame" x="8" y="0.0" width="433.5" height="90"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imp-sf-TtK" customClass="DownloadableImageView" customModule="iTunesSearch" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imp-sf-TtK">
                                             <rect key="frame" x="0.0" y="5" width="80" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="imp-sf-TtK" secondAttribute="height" multiplier="1:1" id="rXd-EV-sQf"/>

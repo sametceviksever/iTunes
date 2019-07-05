@@ -10,8 +10,8 @@ import UIKit
 
 class DetailVC: UIViewController, Reusable {
   
-  @IBOutlet weak var imgPreview: DownloadableImageView!
-  @IBOutlet weak var img60: DownloadableImageView!
+  @IBOutlet weak var imgPreview: UIImageView!
+  @IBOutlet weak var img60: UIImageView!
   @IBOutlet weak var btnPlay: UIButton!
   @IBOutlet weak var lblName: UILabel!
   @IBOutlet weak var lblRelease: UILabel!
@@ -56,8 +56,9 @@ class DetailVC: UIViewController, Reusable {
       lblDescription.isHidden = true
     }
     btnPlay.isHidden = media.previewUrl == nil
-    img60.getImage(with: media.litleImageUrl)
-    imgPreview.getImage(with: media.bigImageUrl)
+    
+    img60.processor.setImage(with: media.litleImageUrl, placeHolder: UIImage(named: "placeholder"))
+    imgPreview.processor.setImage(with: media.bigImageUrl)
     let deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(askForSure))
     navigationItem.rightBarButtonItem = deleteButton
   }

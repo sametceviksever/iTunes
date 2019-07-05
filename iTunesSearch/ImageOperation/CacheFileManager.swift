@@ -86,9 +86,15 @@ public class CacheFileManager {
     }
     
     let resourceKeys: Set<URLResourceKey> = [.contentModificationDateKey, .creationDateKey]
-    guard let file = try? File(with: fileURL, resourceKeys: resourceKeys),
-      !file.isExpired else {
-        return nil
+    let file: File
+    do {
+      file = try File(with: fileURL, resourceKeys: resourceKeys)
+    } catch {
+      throw CacheError.fileNotExist
+    }
+    
+    if file.isExpired {
+      return nil
     }
     
     let data: Data

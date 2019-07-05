@@ -21,3 +21,5 @@ extension UIImage: Costable {
     return pixel * cgImage.bitsPerPixel / 8
   }
 }
+
+extension UIImageView: ProccessorProtocol{ }

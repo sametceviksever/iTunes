@@ -13,14 +13,14 @@ public class ListCVC: UICollectionViewCell, Reusable {
   @IBOutlet weak var lblName: UILabel!
   @IBOutlet weak var lblGenre: UILabel!
   @IBOutlet weak var lblRelease: UILabel!
-  @IBOutlet weak var img: DownloadableImageView!
+  @IBOutlet weak var img: UIImageView!
   @IBOutlet weak var container: UIView!
   
   public func configure(with model: MediaViewModel) {
     lblName.text = model.name
     lblGenre.text = model.genre
     lblRelease.text = model.releaseDate
-    img.getImage(with: model.litleImageUrl)
+    img.processor.setImage(with: model.litleImageUrl, placeHolder: UIImage(named: "placeholder"))
     container.backgroundColor = model.isVisited ? UIColor.init(red: 0.90, green: 0.90, blue: 0.95, alpha: 1) : .white
   }
 }

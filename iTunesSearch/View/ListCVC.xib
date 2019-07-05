@@ -25,7 +25,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CJv-dK-FOe">
                                 <rect key="frame" x="5" y="3" width="265" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sId-iz-0Nu" customClass="DownloadableImageView" customModule="iTunesSearch" customModuleProvider="target">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sId-iz-0Nu">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sId-iz-0Nu" secondAttribute="height" multiplier="1:1" id="7J1-dF-ja2"/>
@@ -100,7 +100,7 @@
             <size key="customSize" width="285" height="92"/>
             <connections>
                 <outlet property="container" destination="Tyh-yR-8x4" id="u8e-WF-IyD"/>
-                <outlet property="img" destination="sId-iz-0Nu" id="vh6-Lb-KdQ"/>
+                <outlet property="img" destination="sId-iz-0Nu" id="syq-Yo-aAQ"/>
                 <outlet property="lblGenre" destination="ZsF-px-xlJ" id="oX4-r8-byW"/>
                 <outlet property="lblName" destination="kSi-c1-fMb" id="6yj-To-Ufi"/>
                 <outlet property="lblRelease" destination="QBF-EZ-YSj" id="LkW-mp-o6m"/>

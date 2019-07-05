@@ -19,27 +19,16 @@ public struct CacheManager {
   private let cache = NSCache<NSString, AnyObject>()
   private let fileManager: CacheFileManager? = CacheFileManager.shared
   
-  public func record (image: UIImage,
-                     for key: String,
-                     until cacheTime: CacheTime) {
+  public func record<T: Costable> (item: T,
+                     for key: String) {
     
-    cache.setObject(image, forKey: key as NSString, cost: image.cost)
-    fileManager?.store(data: image.pngData(), for: key)
+    cache.setObject(item, forKey: key.md5 as NSString, cost: item.cost)
   }
   
-  public func get(for key: String) -> UIImage? {
-    if let image = cache.object(forKey: key.md5 as NSString) as? UIImage {
-      return image
+  public func get<T>(for key: String) -> T? {
+    if let item = cache.object(forKey: key.md5 as NSString) as? T {
+      return item
     }
-    
-    do {
-      if let data = try fileManager?.value(for: key) {
-        return UIImage(data: data)
-      }
-    } catch {
-      return nil
-    }
-    
     return nil
   }
 }
