@@ -7,7 +7,7 @@
 //
 
 import UIKit
-private var tasks: [UIImageView: URLSessionTask] = [:]
+private var tasks: [UIImageView: String] = [:]
 public struct Proccessor<Base> {
   let base: Base
   var downloadTask: URLSessionDataTask?
@@ -30,6 +30,7 @@ public extension Proccessor where Base: UIImageView {
   func setImage(with urlString: String?, placeHolder: UIImage? = nil) {
     
     var mutableSelf = self
+    tasks[mutableSelf.base] = urlString
     guard let urlString = urlString else {
       mutableSelf.base.image = placeHolder
       return
@@ -43,10 +44,6 @@ public extension Proccessor where Base: UIImageView {
       CacheManager.shared.record(item: image, for: urlString)
     } else {
       mutableSelf.base.image = placeHolder
-      if let task = tasks[mutableSelf.base] {
-        task.cancel()
-        tasks[mutableSelf.base] = nil
-      }
       
       guard let url = URL(string: urlString) else {
         return
@@ -56,19 +53,21 @@ public extension Proccessor where Base: UIImageView {
         .shared
         .dataTask(with: url,
                   completionHandler: { (data, _, _) in
+                    tasks[mutableSelf.base] = nil
                     if let data = data,
                       let image = UIImage(data: data) {
-                      DispatchQueue.main.async {
-                        mutableSelf.base.image = UIImage(data: data)
-                        CacheFileManager
-                          .shared?
-                          .store(data: data, for: urlString)
+                      if let activeUrl = tasks[mutableSelf.base],
+                        activeUrl == url.absoluteString {
+                        DispatchQueue.main.async {
+                          mutableSelf.base.image = UIImage(data: data)
+                        }
                       }
-                      tasks[mutableSelf.base] = nil
+                      CacheFileManager
+                        .shared?
+                        .store(data: data, for: urlString)
                       CacheManager.shared.record(item: image, for: urlString)
                     }
         })
-      tasks[mutableSelf.base] = mutableSelf.downloadTask
       mutableSelf.downloadTask?.resume()
     }
   }

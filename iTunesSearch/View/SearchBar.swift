@@ -17,15 +17,20 @@ public protocol SearchBarDelegate: class {
 public class SearchBar: BaseView {
   @IBOutlet weak var textField: UITextField!
   @IBOutlet weak var cancelButton: UIButton!
+  public var placeHolder: String? {
+    didSet {
+      textField.placeholder = placeHolder
+    }
+  }
+  
   fileprivate weak var delegate: SearchBarDelegate?
   
-  public func configure(with delegate: SearchBarDelegate, placeHolder: String) {
+  public func configure(with delegate: SearchBarDelegate) {
     
     textField.backgroundColor = UIColor.white
     textField.autocorrectionType = .no
     textField.addTarget(self, action: #selector(valueChanged(sender:)), for: .editingChanged)
     textField.delegate = self
-    textField.placeholder = placeHolder
     self.delegate = delegate
   }
   

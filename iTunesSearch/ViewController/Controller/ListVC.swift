@@ -30,17 +30,23 @@ public class ListVC: UIViewController, Reusable {
     viewModel.reloadIndexesHandler = {[weak self] indexes in
       self?.remove(indexes: indexes)
     }
-    
-    collectionView.registerCell(type: ListCVC.self)
+    setupCollectionView()
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(rotated),
                                            name: UIDevice.orientationDidChangeNotification,
                                            object: nil)
     navigationItem.setRightBarButton(rightButton, animated: false)
+    navigationItem.title = "iTunes Search".local
+    searchBar.configure(with: self)
+    searchBar.placeHolder = "Your Search Text".local
+  }
+  
+  private func setupCollectionView() {
     collectionView.dataSource = self
     collectionView.delegate = self
-    navigationItem.title = "iTunes Search".local
-    searchBar.configure(with: self, placeHolder: "Your Search Text".local)
+    let layout = ListCollectionViewLayout()
+    collectionView.collectionViewLayout = layout
+    collectionView.registerCell(type: ListCVC.self)
   }
   
   lazy var rightButton: UIBarButtonItem = {
@@ -113,21 +119,6 @@ extension ListVC: UICollectionViewDataSource {
     cell.configure(with: media)
     
     return cell
-  }
-}
-
-extension ListVC: UICollectionViewDelegateFlowLayout {
-  public func collectionView(_ collectionView: UICollectionView,
-                             layout collectionViewLayout: UICollectionViewLayout,
-                             sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    let collectionViewWidth = collectionView.bounds.width
-    if UIDevice.current.userInterfaceIdiom == .pad || UIDevice.current.orientation.isLandscape {
-      let size = CGSize(width: collectionViewWidth / 2, height: 80)
-      return size
-    }
-    
-    return CGSize(width: collectionViewWidth, height: 80)
   }
 }
 

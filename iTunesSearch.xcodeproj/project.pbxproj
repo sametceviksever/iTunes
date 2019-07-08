@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A206A9F922D327F300F7FC06 /* ListCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A206A9F822D327F300F7FC06 /* ListCollectionViewLayout.swift */; };
 		A2691CD922CF5D330099D298 /* Prossessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2691CD822CF5D330099D298 /* Prossessor.swift */; };
 		A2691CE322CFE18E0099D298 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2691CE222CFE18E0099D298 /* SearchBar.swift */; };
 		A2691CE622CFE31D0099D298 /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2691CE822CFE31D0099D298 /* SearchBar.xib */; };
@@ -63,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A206A9F822D327F300F7FC06 /* ListCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewLayout.swift; sourceTree = "<group>"; };
 		A2691CD822CF5D330099D298 /* Prossessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prossessor.swift; sourceTree = "<group>"; };
 		A2691CE222CFE18E0099D298 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		A2691CE722CFE31D0099D298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchBar.xib; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				A2BB79C8222E8DB100A43678 /* EmptyState.xib */,
 				A2691CE222CFE18E0099D298 /* SearchBar.swift */,
 				A2691CE822CFE31D0099D298 /* SearchBar.xib */,
+				A206A9F822D327F300F7FC06 /* ListCollectionViewLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				A2BB79A5222E4D9A00A43678 /* HTTPError.swift in Sources */,
 				A2F6E9C922CD4DB6008468DB /* TableViewExtension.swift in Sources */,
 				A2F6E9BD22CC5AB9008468DB /* CodableExtension.swift in Sources */,
+				A206A9F922D327F300F7FC06 /* ListCollectionViewLayout.swift in Sources */,
 				A2BB799B222E4D9100A43678 /* NetworkError.swift in Sources */,
 				A2BB7992222E4D8800A43678 /* CollectionViewExtension.swift in Sources */,
 				A2BB7972222E4D6B00A43678 /* CoreData.swift in Sources */,

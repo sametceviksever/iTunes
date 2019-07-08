@@ -12,8 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchBar" customModule="iTunesSearch" customModuleProvider="target">
             <connections>
-                <outlet property="cancelButton" destination="bc7-aN-o7y" id="Gc3-ya-nwk"/>
-                <outlet property="textField" destination="6oV-Mi-orc" id="ela-nh-jrv"/>
+                <outlet property="cancelButton" destination="bc7-aN-o7y" id="vDp-bs-eCU"/>
+                <outlet property="textField" destination="6oV-Mi-orc" id="7Zb-UG-eCn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -34,7 +34,7 @@
                             <rect key="frame" x="358" y="2" width="48" height="814"/>
                             <state key="normal" title="Cancel"/>
                             <connections>
-                                <action selector="closeButtonTapped" destination="-1" eventType="touchUpInside" id="kEM-ht-QtY"/>
+                                <action selector="closeButtonTapped" destination="-1" eventType="touchUpInside" id="GfW-2Z-1eq"/>
                             </connections>
                         </button>
                     </subviews>
