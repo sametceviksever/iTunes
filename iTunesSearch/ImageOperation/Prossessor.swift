@@ -53,7 +53,6 @@ public extension Proccessor where Base: UIImageView {
         .shared
         .dataTask(with: url,
                   completionHandler: { (data, _, _) in
-                    tasks[mutableSelf.base] = nil
                     if let data = data,
                       let image = UIImage(data: data) {
                       if let activeUrl = tasks[mutableSelf.base],
