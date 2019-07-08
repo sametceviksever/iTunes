@@ -27,7 +27,7 @@ public class DetailViewModel {
     }
   }
   
-  @objc private func itemDelete() {
+  private func itemDelete() {
     isDeleted = true
     dismissHandler?()
   }
@@ -53,5 +53,13 @@ public class DetailViewModel {
     let vcPlayer = AVPlayerViewController()
     vcPlayer.player = player
     return vcPlayer
+  }
+  
+  public func playPreview(at previewPlayer: UIViewController?) {
+    guard let previewController = previewPlayer as? AVPlayerViewController else {
+      return
+    }
+    
+    previewController.player?.play()
   }
 }

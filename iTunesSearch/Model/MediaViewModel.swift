@@ -21,7 +21,7 @@ public struct MediaViewModel {
   public let previewUrl: String?
   public var isVisited: Bool
   
-  public init(with media: iTunesMedia) {
+  public init(with media: Media) {
     bigImageUrl = media.artworkUrl100
     litleImageUrl = media.artworkUrl60
     genre = media.primaryGenreName

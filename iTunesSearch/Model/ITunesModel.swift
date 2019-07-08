@@ -8,12 +8,12 @@
 
 import Foundation
 
-public struct iTunesModel: Codable {
+public struct ITunesModel: Codable {
   let resultCount: Int
-  var results: [iTunesMedia]
+  var results: [Media]
 }
 
-public struct iTunesMedia: Codable {
+public struct Media: Codable {
   let previewUrl: String?
   let artworkUrl60: String?
   let artworkUrl30: String?

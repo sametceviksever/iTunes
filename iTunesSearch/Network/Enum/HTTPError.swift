@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum HTTPError:String{
+public enum HTTPError: String {
     case unAuthorized = "401"
     case wrong = "404"
     case serverNotAvaible = "500"

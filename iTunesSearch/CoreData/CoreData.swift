@@ -9,13 +9,13 @@
 import Foundation
 import CoreData
 
-public enum EntityType: String{
+public enum EntityType: String {
   case visited = "Visited"
   case deleted = "Deleted"
 }
 
 public class CoreData {
-  public static var shared:CoreData = CoreData()
+  public static var shared: CoreData = CoreData()
   
   public var visitedMedias: [String] = []
   public var deletedMedias: [String] = []
@@ -26,20 +26,20 @@ public class CoreData {
   }
   private func getMedias(for entityType: EntityType) -> [String] {
     var medias: [String] = []
-    for item in getData(from: entityType.rawValue){
-      if let id = item.value(forKey: "mediaId") as? String{
+    for item in getData(from: entityType.rawValue) {
+      if let id = item.value(forKey: "mediaId") as? String {
         medias.append(id)
       }
     }
     return medias
   }
   
-  private func getData(from entityName: String) -> [NSManagedObject]{
+  private func getData(from entityName: String) -> [NSManagedObject] {
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
     request.returnsObjectsAsFaults = false
     do {
       let result = try context.fetch(request)
-      if let items = result as? [NSManagedObject]{
+      if let items = result as? [NSManagedObject] {
         return items
       } else {
         return [NSManagedObject]()
@@ -50,12 +50,12 @@ public class CoreData {
   }
   
   @discardableResult
-  public func saveMedia(with id:String, to entityType: EntityType) -> Bool{
+  public func saveMedia(with id: String, to entityType: EntityType) -> Bool {
     let entity = NSEntityDescription.entity(forEntityName: entityType.rawValue, in: context)
     let newObject = NSManagedObject(entity: entity!, insertInto: context)
     newObject.setValue(id, forKey: "mediaId")
     
-    do{
+    do {
       try context.save()
       if entityType == .visited {
         visitedMedias.append(id)
@@ -70,12 +70,13 @@ public class CoreData {
     
   }
   
-  fileprivate var context: NSManagedObjectContext {get {
-    if #available(iOS 10.0, *) {
-      return persistentContainer.viewContext
-    } else {
-      return managedObjectContext
-    }
+  fileprivate var context: NSManagedObjectContext {
+    get {
+      if #available(iOS 10.0, *) {
+        return persistentContainer.viewContext
+      } else {
+        return managedObjectContext
+      }
     }
   }
   
@@ -83,8 +84,10 @@ public class CoreData {
   fileprivate lazy var persistentContainer: NSPersistentContainer = {
     
     let container = NSPersistentContainer(name: "Media")
-    container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-      if let error = error as NSError? { }
+    container.loadPersistentStores(completionHandler: { (_, error) in
+      if let error = error as NSError? {
+        print(error)
+      }
     })
     return container
   }()

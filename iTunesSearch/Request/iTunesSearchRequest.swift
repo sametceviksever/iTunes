@@ -13,11 +13,11 @@ struct iTunesSearchRequest: Request {
   var url: String {return "https://itunes.apple.com/search"}
   var methodType: MethodType {return .get}
   var headers: [String : String] {return [:]}
-  var body: iTunesRequestObject?
-  var handler: (((Result<iTunesModel, NetworkError>) -> Void))?
+  var body: ITunesRequestModel?
+  var handler: (((Result<ITunesModel, NetworkError>) -> Void))?
   
   init(searchText: String, mediaType: MediaType?) {
-    self.body = iTunesRequestObject(term: searchText,
+    self.body = ITunesRequestModel(term: searchText,
                                     media: mediaType?.requestName)
   }
 }

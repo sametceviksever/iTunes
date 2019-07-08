@@ -11,6 +11,7 @@ import UIKit
 public class MediaTypeVC: UIViewController, Reusable {
   deinit {
     print("MediaTypeVC Deinit")
+    tableView.removeObserver(self, forKeyPath: "contentSize")
   }
   
   @IBOutlet weak var tableView: UITableView!
@@ -33,8 +34,8 @@ public class MediaTypeVC: UIViewController, Reusable {
                                     change: [NSKeyValueChangeKey : Any]?,
                                     context: UnsafeMutableRawPointer?) {
     var size = tableView.contentSize
-    size.height += 45
-    size.width = 150
+    size.height = viewModel.estimatedHeight(with: tableView.contentSize)
+    size.width = viewModel.estimatedWidth()
     preferredContentSize = size
   }
   

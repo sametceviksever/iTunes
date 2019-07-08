@@ -69,9 +69,11 @@ class DetailVC: UIViewController, Reusable {
   }
   
   @IBAction func play() {
-    guard let preview = viewModel.preparePreview() else {
+    guard let previewController = viewModel.preparePreview() else {
       return
     }
-    present(preview, animated: true, completion: nil)
+    present(previewController, animated: true, completion: {[weak self, weak previewController] in
+      self?.viewModel.playPreview(at: previewController)
+    })
   }
 }

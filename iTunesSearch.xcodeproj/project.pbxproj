@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A2691CD922CF5D330099D298 /* Prossessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2691CD822CF5D330099D298 /* Prossessor.swift */; };
+		A2691CE322CFE18E0099D298 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2691CE222CFE18E0099D298 /* SearchBar.swift */; };
+		A2691CE622CFE31D0099D298 /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2691CE822CFE31D0099D298 /* SearchBar.xib */; };
 		A2BB7943222E4BF400A43678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB7942222E4BF400A43678 /* AppDelegate.swift */; };
 		A2BB794A222E4BF500A43678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2BB7949222E4BF500A43678 /* Assets.xcassets */; };
 		A2BB794D222E4BF500A43678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BB794B222E4BF500A43678 /* LaunchScreen.storyboard */; };
-		A2BB7968222E4D5F00A43678 /* AnimationFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB7965222E4D5F00A43678 /* AnimationFlowLayout.swift */; };
-		A2BB796A222E4D5F00A43678 /* iTunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB7967222E4D5F00A43678 /* iTunesModel.swift */; };
+		A2BB796A222E4D5F00A43678 /* ITunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB7967222E4D5F00A43678 /* ITunesModel.swift */; };
 		A2BB796D222E4D6300A43678 /* CurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB796B222E4D6300A43678 /* CurrencyType.swift */; };
 		A2BB796E222E4D6300A43678 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB796C222E4D6300A43678 /* MediaType.swift */; };
 		A2BB7972222E4D6B00A43678 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB796F222E4D6B00A43678 /* CoreData.swift */; };
@@ -30,7 +31,6 @@
 		A2BB7991222E4D8800A43678 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB798A222E4D8800A43678 /* StringExtension.swift */; };
 		A2BB7992222E4D8800A43678 /* CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB798B222E4D8800A43678 /* CollectionViewExtension.swift */; };
 		A2BB7994222E4D8800A43678 /* DispatchWorkItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB798D222E4D8800A43678 /* DispatchWorkItemExtension.swift */; };
-		A2BB7995222E4D8800A43678 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB798E222E4D8800A43678 /* UIViewExtension.swift */; };
 		A2BB7997222E4D8800A43678 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB7990222E4D8800A43678 /* ArrayExtension.swift */; };
 		A2BB7999222E4D8D00A43678 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB7998222E4D8D00A43678 /* Network.swift */; };
 		A2BB799B222E4D9100A43678 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB799A222E4D9100A43678 /* NetworkError.swift */; };
@@ -53,7 +53,7 @@
 		A2F6E9BB22CC5A7B008468DB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6E9BA22CC5A7B008468DB /* Request.swift */; };
 		A2F6E9BD22CC5AB9008468DB /* CodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6E9BC22CC5AB9008468DB /* CodableExtension.swift */; };
 		A2F6E9BF22CC5B48008468DB /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6E9BE22CC5B47008468DB /* DataExtension.swift */; };
-		A2F6E9C122CC5DA2008468DB /* iTunesRequestObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6E9C022CC5DA2008468DB /* iTunesRequestObject.swift */; };
+		A2F6E9C122CC5DA2008468DB /* ITunesRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6E9C022CC5DA2008468DB /* ITunesRequestModel.swift */; };
 		A2F6E9C322CD0263008468DB /* UIViewController+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6E9C222CD0263008468DB /* UIViewController+Reusable.swift */; };
 		A2F6E9C522CD0F16008468DB /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6E9C422CD0F16008468DB /* MediaViewModel.swift */; };
 		A2F6E9C722CD426E008468DB /* PersistentCoordinatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F6E9C622CD426E008468DB /* PersistentCoordinatorExtension.swift */; };
@@ -64,13 +64,16 @@
 
 /* Begin PBXFileReference section */
 		A2691CD822CF5D330099D298 /* Prossessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prossessor.swift; sourceTree = "<group>"; };
+		A2691CE222CFE18E0099D298 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		A2691CE722CFE31D0099D298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchBar.xib; sourceTree = "<group>"; };
+		A2691CEA22CFE31F0099D298 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SearchBar.strings; sourceTree = "<group>"; };
+		A2691CEC22CFE3200099D298 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/SearchBar.strings; sourceTree = "<group>"; };
 		A2BB793F222E4BF400A43678 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BB7942222E4BF400A43678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2BB7949222E4BF500A43678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2BB794C222E4BF500A43678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2BB794E222E4BF500A43678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2BB7965222E4D5F00A43678 /* AnimationFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationFlowLayout.swift; sourceTree = "<group>"; };
-		A2BB7967222E4D5F00A43678 /* iTunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesModel.swift; sourceTree = "<group>"; };
+		A2BB7967222E4D5F00A43678 /* ITunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITunesModel.swift; sourceTree = "<group>"; };
 		A2BB796B222E4D6300A43678 /* CurrencyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyType.swift; sourceTree = "<group>"; };
 		A2BB796C222E4D6300A43678 /* MediaType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		A2BB796F222E4D6B00A43678 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
@@ -88,7 +91,6 @@
 		A2BB798A222E4D8800A43678 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A2BB798B222E4D8800A43678 /* CollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewExtension.swift; sourceTree = "<group>"; };
 		A2BB798D222E4D8800A43678 /* DispatchWorkItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchWorkItemExtension.swift; sourceTree = "<group>"; };
-		A2BB798E222E4D8800A43678 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A2BB7990222E4D8800A43678 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		A2BB7998222E4D8D00A43678 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		A2BB799A222E4D9100A43678 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 		A2F6E9BA22CC5A7B008468DB /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		A2F6E9BC22CC5AB9008468DB /* CodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtension.swift; sourceTree = "<group>"; };
 		A2F6E9BE22CC5B47008468DB /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
-		A2F6E9C022CC5DA2008468DB /* iTunesRequestObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesRequestObject.swift; sourceTree = "<group>"; };
+		A2F6E9C022CC5DA2008468DB /* ITunesRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesRequestModel.swift; sourceTree = "<group>"; };
 		A2F6E9C222CD0263008468DB /* UIViewController+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reusable.swift"; sourceTree = "<group>"; };
 		A2F6E9C422CD0F16008468DB /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
 		A2F6E9C622CD426E008468DB /* PersistentCoordinatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentCoordinatorExtension.swift; sourceTree = "<group>"; };
@@ -187,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				A2BB79B5222E4EA400A43678 /* iTunesSearchRequest.swift */,
-				A2F6E9C022CC5DA2008468DB /* iTunesRequestObject.swift */,
+				A2F6E9C022CC5DA2008468DB /* ITunesRequestModel.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -212,7 +214,6 @@
 				A2BB798B222E4D8800A43678 /* CollectionViewExtension.swift */,
 				A2BB798D222E4D8800A43678 /* DispatchWorkItemExtension.swift */,
 				A2BB798A222E4D8800A43678 /* StringExtension.swift */,
-				A2BB798E222E4D8800A43678 /* UIViewExtension.swift */,
 				A2F6E9BC22CC5AB9008468DB /* CodableExtension.swift */,
 				A2F6E9BE22CC5B47008468DB /* DataExtension.swift */,
 				A2F6E9C222CD0263008468DB /* UIViewController+Reusable.swift */,
@@ -227,6 +228,8 @@
 				A2BB7986222E4D8400A43678 /* ListCVC.xib */,
 				A2BB79C6222E8C8B00A43678 /* EmptyState.swift */,
 				A2BB79C8222E8DB100A43678 /* EmptyState.xib */,
+				A2691CE222CFE18E0099D298 /* SearchBar.swift */,
+				A2691CE822CFE31D0099D298 /* SearchBar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,8 +321,7 @@
 		A2BB7964222E4D0800A43678 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A2BB7965222E4D5F00A43678 /* AnimationFlowLayout.swift */,
-				A2BB7967222E4D5F00A43678 /* iTunesModel.swift */,
+				A2BB7967222E4D5F00A43678 /* ITunesModel.swift */,
 				A2F6E9C422CD0F16008468DB /* MediaViewModel.swift */,
 			);
 			path = Model;
@@ -401,6 +403,7 @@
 			files = (
 				A2BB797D222E4D7700A43678 /* ListVC.xib in Resources */,
 				A2BB79B1222E4E5100A43678 /* Localizable.strings in Resources */,
+				A2691CE622CFE31D0099D298 /* SearchBar.xib in Resources */,
 				A2BB794D222E4BF500A43678 /* LaunchScreen.storyboard in Resources */,
 				A2BB797C222E4D7700A43678 /* DetailVC.xib in Resources */,
 				A2BB7988222E4D8400A43678 /* ListCVC.xib in Resources */,
@@ -426,6 +429,7 @@
 				A2F6E9B522CBED82008468DB /* FileOperation.swift in Sources */,
 				A2BB796D222E4D6300A43678 /* CurrencyType.swift in Sources */,
 				A2BB79A6222E4D9A00A43678 /* MethodType.swift in Sources */,
+				A2691CE322CFE18E0099D298 /* SearchBar.swift in Sources */,
 				A2BB7973222E4D6B00A43678 /* Media.xcdatamodeld in Sources */,
 				A2BB7977222E4D7200A43678 /* ListVC.swift in Sources */,
 				A2BB79B6222E4EA500A43678 /* iTunesSearchRequest.swift in Sources */,
@@ -442,7 +446,7 @@
 				A2BB7997222E4D8800A43678 /* ArrayExtension.swift in Sources */,
 				A2BB7979222E4D7200A43678 /* MediaTypeVC.swift in Sources */,
 				A2BB7991222E4D8800A43678 /* StringExtension.swift in Sources */,
-				A2BB796A222E4D5F00A43678 /* iTunesModel.swift in Sources */,
+				A2BB796A222E4D5F00A43678 /* ITunesModel.swift in Sources */,
 				A2BB79A5222E4D9A00A43678 /* HTTPError.swift in Sources */,
 				A2F6E9C922CD4DB6008468DB /* TableViewExtension.swift in Sources */,
 				A2F6E9BD22CC5AB9008468DB /* CodableExtension.swift in Sources */,
@@ -454,12 +458,10 @@
 				A2F6E9B922CC4B1E008468DB /* DownloadableImageView.swift in Sources */,
 				A2BB7983222E4D7E00A43678 /* ListViewModel.swift in Sources */,
 				A2F6E9C322CD0263008468DB /* UIViewController+Reusable.swift in Sources */,
-				A2BB7968222E4D5F00A43678 /* AnimationFlowLayout.swift in Sources */,
 				A2F6E9BB22CC5A7B008468DB /* Request.swift in Sources */,
 				A2BB799E222E4D9500A43678 /* RequestError.swift in Sources */,
 				A2F6E9B722CBEF5F008468DB /* File.swift in Sources */,
-				A2BB7995222E4D8800A43678 /* UIViewExtension.swift in Sources */,
-				A2F6E9C122CC5DA2008468DB /* iTunesRequestObject.swift in Sources */,
+				A2F6E9C122CC5DA2008468DB /* ITunesRequestModel.swift in Sources */,
 				A2BB7985222E4D7E00A43678 /* MediaTypeViewModel.swift in Sources */,
 				A2BB7943222E4BF400A43678 /* AppDelegate.swift in Sources */,
 			);
@@ -468,6 +470,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A2691CE822CFE31D0099D298 /* SearchBar.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2691CE722CFE31D0099D298 /* Base */,
+				A2691CEA22CFE31F0099D298 /* en */,
+				A2691CEC22CFE3200099D298 /* tr */,
+			);
+			name = SearchBar.xib;
+			sourceTree = "<group>";
+		};
 		A2BB794B222E4BF500A43678 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

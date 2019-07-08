@@ -131,23 +131,33 @@
                                     </constraints>
                                     <edgeInsets key="layoutMargins" top="5" left="0.0" bottom="5" right="0.0"/>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKd-ER-fRZ" userLabel="Price:">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Price: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKd-ER-fRZ" userLabel="Price:">
                                     <rect key="frame" x="8" y="90" width="433.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-iA-S4C" userLabel="Description">
-                                    <rect key="frame" x="8" y="110.5" width="433.5" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-4Q-pWZ">
-                                    <rect key="frame" x="8" y="128.5" width="433.5" height="246.5"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fe1-Xr-lPn">
+                                    <rect key="frame" x="8" y="110.5" width="433.5" height="264.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-iA-S4C" userLabel="Description">
+                                            <rect key="frame" x="0.0" y="0.0" width="433.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="MTe-iA-S4C" secondAttribute="trailing" id="DXR-Db-Lbz"/>
+                                        <constraint firstAttribute="bottom" secondItem="MTe-iA-S4C" secondAttribute="bottom" id="Uex-J8-xbf"/>
+                                        <constraint firstItem="MTe-iA-S4C" firstAttribute="leading" secondItem="fe1-Xr-lPn" secondAttribute="leading" id="esp-RN-VGT"/>
+                                        <constraint firstItem="MTe-iA-S4C" firstAttribute="top" secondItem="fe1-Xr-lPn" secondAttribute="top" id="giu-vb-3Yj"/>
+                                    </constraints>
+                                </scrollView>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="MTe-iA-S4C" firstAttribute="width" secondItem="NKd-ER-fRZ" secondAttribute="width" id="tfg-ZC-TgF"/>
+                            </constraints>
                             <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
                         </stackView>
                     </subviews>

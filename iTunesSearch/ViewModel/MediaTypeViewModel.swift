@@ -14,6 +14,8 @@ public class MediaTypeViewModel {
   }
   private(set) public var selectedMediaType:MediaType
   private var typeList: [MediaType] = [.movie, .music, .podcast, .all]
+  private let buttonHeight: CGFloat = 45
+  private let witdh: CGFloat = 150
   
   public var rowCount: Int {
     return typeList.count
@@ -29,5 +31,13 @@ public class MediaTypeViewModel {
   
   public func typeSelected(at indexPath: IndexPath) {
     selectedMediaType = typeList[indexPath.row]
+  }
+  
+  public func estimatedWidth() -> CGFloat {
+    return witdh
+  }
+  
+  public func estimatedHeight(with contentSize: CGSize) -> CGFloat {
+    return contentSize.height + 45
   }
 }

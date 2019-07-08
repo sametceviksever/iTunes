@@ -1,5 +1,5 @@
 //
-//  iTunesRequestObject.swift
+//  iTunesRequest.swift
 //  iTunesSearch
 //
 //  Created by Samet Çeviksever on 3.07.2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct iTunesRequestObject: Encodable {
+struct ITunesRequestModel: Encodable {
   let term: String
   let limit: Int
   let media: String?

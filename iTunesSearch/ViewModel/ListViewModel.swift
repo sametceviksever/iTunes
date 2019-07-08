@@ -28,7 +28,7 @@ public class ListViewModel {
     searchText = ""
   }
   
-  public func media(for indexPath: IndexPath) -> MediaViewModel{
+  public func media(for indexPath: IndexPath) -> MediaViewModel {
     return medias[indexPath.row]
   }
   
@@ -36,7 +36,7 @@ public class ListViewModel {
     self.searchText = searchText
     workItem?.cancel()
     workItem = DispatchWorkItem(block: {[weak self] in
-      guard let `self` = self, let _ = self.workItem
+      guard let `self` = self
         else { return }
       self.call()
     })
@@ -65,30 +65,34 @@ public class ListViewModel {
         self?.reloadIndexesHandler?([indexPath])
       }
     })
-    let vc = DetailVC.init()
-    vc.viewModel = viewModel
+    let controller = DetailVC.init()
+    controller.viewModel = viewModel
     
-    return vc
+    return controller
   }
   
   public func popover(_ sender: UIButton,
-                      for controller: UIPopoverPresentationControllerDelegate) -> UIViewController {
+                      for delegate: UIPopoverPresentationControllerDelegate) -> UIViewController? {
     let viewModel = MediaTypeViewModel(selectedType)
-    let vc = MediaTypeVC.init()
-    vc.viewModel = viewModel
-    vc.modalPresentationStyle = .popover
-    let popover = vc.presentationController as! UIPopoverPresentationController
+    let controller = MediaTypeVC.init()
+    controller.viewModel = viewModel
+    controller.modalPresentationStyle = .popover
+    
+    guard let popover = controller.presentationController as? UIPopoverPresentationController else {
+      return nil
+    }
+    
     popover.sourceView = sender
     popover.sourceRect = sender.bounds
     popover.permittedArrowDirections = [.up]
-    popover.delegate = controller
+    popover.delegate = delegate
     
-    vc.okButtonPressed = {[weak self] type in
+    controller.okButtonPressed = {[weak self] type in
       self?.selectedType = type
       self?.call()
     }
     
-    return vc
+    return controller
   }
   
   private func call() {

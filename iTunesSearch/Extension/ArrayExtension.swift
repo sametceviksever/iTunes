@@ -9,14 +9,14 @@
 import Foundation
 
 public extension Array {
-  public func get(_ index: Int) -> Element? {
+  func get(_ index: Int) -> Element? {
     guard index >= 0 && index < count else { return nil }
     return self[index]
   }
 }
 
 public extension ArraySlice where Element: Any {
-  public func toArray() -> Array<Element> {
+  func toArray() -> Array<Element> {
     return Array(self)
   }
 }
